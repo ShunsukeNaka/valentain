@@ -70,24 +70,24 @@ h2{
 }
 
 .main .block1{
-    background:coral;
+    background:rgb(255, 151, 113);
     
 }
 .main .block2{
-    background: cornflowerblue;
+    background: rgb(124, 163, 235);
 }
 .main .block3{
-    background-color: rgb(17, 150, 17);
+    background-color: rgb(101, 175, 101);
 }
 .main .block3 .pgroup p{
     font-size: 30px;
     text-align: center;
 }
 .main .block4{
-    background: crimson;
+    background: rgb(253, 118, 145);
 }
 .main .block5{
-    background: rgb(243, 240, 79);
+    background: rgb(247, 245, 155);
 }
 
 .form{

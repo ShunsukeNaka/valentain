@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+body{
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', 'sans-serif';
+    font-size: 40px;
+    background: #FFA2D9;
+    background: rgb(255, 160, 217);
+    
+}
+
+.header{
+    font-size:  80px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: chocolate;
+}
+
+.header .logo{
+    padding: 0px;
+}
+h1{
+    color: #fff;
+}
+
+.backwhite{
+    background: #fff;
+}
+
+.header p{ 
+    font-size: 50px;
+}
+
+.main{
+    border-top: 10px solid hsl(180, 100%, 74%);
+    border-left: hsl(180, 100%, 74%);
+    border-right: hsl(180, 100%, 74%);
+    background: hsl(180, 100%, 74%);
+    text-align: center;
+    display: center;
+}
+
+h2{
+    display: inline-block;
+    background: rgb(255, 254, 203);
+    font-size: 60px;
+    font-family: monospace;
+    font-style: initial;
+}
+
+
+.main .blocks{
+    
+   
+    margin: 0px;
+    font-size: 30px;
+    display: inline-block;
+    
+    
+}
+.main .blocks u{
+    font-family:'Impact', 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+}
+
+.mainmargin{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.main .block1{
+    background:coral;
+    
+}
+.main .block2{
+    background: cornflowerblue;
+}
+.main .block3{
+    background-color: rgb(17, 150, 17);
+}
+.main .block3 .pgroup p{
+    font-size: 30px;
+    text-align: center;
+}
+.main .block4{
+    background: crimson;
+}
+.main .block5{
+    background: rgb(243, 240, 79);
+}
+
+.form{
+    display: center;
+    text-align: center;
+}
+.form .formone{
+    font-size: 5px;
+}
+.form .formone .drawresult{
+    display: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.form .formone .drawresult .outputs p{
+    display: block;
+    background: brown;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.footer{
+    background: rgb(255, 160, 217);
+    font-size: 15px;
+    text-align: center;
+}

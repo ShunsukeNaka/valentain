@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chocolate For You</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <meta name="viewport"
+        content="width=320,
+            height=480,
+            initial-scale=1.0,
+            minimum-scale=1.0,
+            maximum-scale=2.0,
+            user-scalable=yes" />
+
+        <script type="text/javascript">
+            function ButtonClick() {
+                var mynamevalue = document.getElementById("myname");     //id="myname"を取得しmynamevalueに代入          
+                var yournamevalue = document.getElementById("yourname"); //id="yourname"を取得しyournamevalueに代入
+                var callvalue = document.getElementById("call");         //id="call"を取得しcallvalueに代入
+                var dovalue = document.getElementById("do");
+                
+                
+                var result1 = String(mynamevalue.value);                 //mynamevalueの結果をresult1に代入
+                var result2 = String(yournamevalue.value);               //yournamevalueの結果をresult2に代入     
+                let chocolateid = document.getElementById('chocolate');  //id="chocolate"を取得しchocolateidに代入
+                RadioNodeList = chocolateid.elements['choco'];           //name="choco"のラジオボタン群でチェックしたものを確認
+                let result3 = RadioNodeList.value;                       //name="choco"のラジオボタン群のチェックしてある項目をresult3に代入
+                var result4 = String(callvalue.value);                   //callvalueの結果をresult4に代入
+                var result5 = String(dovalue.value);                     //dovalueの結果をresult5に代入
+
+
+                if(result1 && result2 && result3 && result4 && result5){
+                    var warningid = document.getElementById("warning");
+                    warning.value = String("");
+
+                    var mynameoutput = document.getElementById("mynameoutput");
+                    var yournameoutput = document.getElementById("yournameoutput");
+                    var chocooutput = document.getElementById("chocooutput");
+                    var calloutput = document.getElementById("calloutput");
+                    var dooutput = document.getElementById("dooutput");
+
+                    mynameoutput.value = result1 + " に ";
+                    yournameoutput.value = result2 + " さんが ";
+                    chocooutput.value = result3 + "を";
+                    calloutput.value = result4 + "と言いながら";
+                    dooutput.value = result5;
+
+                    let img = document.getElementById("chocoimage");
+                    let humanimage = document.getElementById("humanimage");
+                    let imgnum = 0;
+
+                    switch(result3){
+                        case "ビターチョコ":
+                            imgnum = 1;
+                            humanimage.src = "img/human1.png";
+                            break;
+                        case "ミルクチョコ":
+                            imgnum = 2;
+                            humanimage.src = "img/human1.png";
+                            break;
+                        case "ホワイトチョコ":
+                            imgnum = 3;
+                            humanimage.src = "img/human1.png";
+                            break;
+                        case "生チョコ":
+                            imgnum = 4;
+                            humanimage.src = "img/human1.png";
+                            break;
+                        case "チョコカップケーキ":
+                            imgnum = 5;
+                            humanimage.src = "img/human1.png";
+                            break;
+                        case "ガトーショコラ":
+                            imgnum = 6;
+                            humanimage.src = "img/human1.png";
+                            break;
+                        default:
+                            imgnum = 0;
+                            humanimage.src = "img/image0.png";
+                    }
+                    // img要素のsrcに画像ファイル名を設定する
+                    img.src = "img/image" + imgnum + ".png";
+                }else{
+                    warning.value = String("未入力の項目があります");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+
+
+        <div class="header">
+            <div class="logo">
+                <img src="img/logo0.png" alt="" width="64" height="64">
+                <p>Chocolate For You</p>
+            </div>
+            <h1>Happy Valentain<dl>    <dl></h1>
+        </div>
+
+
+        <div class="main">
+            <div class="blocks">
+                <h2>理想の設定を作ろう！</h2>
+                <div class="block1 mainmargin">
+                    <dl><label for="myname"><u>君の名前は？</u></label></dl>
+                    <form action="#" method="post">
+                    <input type="text" name="myname" id="myname" placeholder="例）太郎" size="50"  maxlength="">
+                    </form>
+                </div>
+                <div class="block2 mainmargin">
+                    <dl><label for="yourname"><u>誰から？</u></label></dl>
+                    <form action="#" method="post">
+                    <input type="text" name="yourname" id="yourname" placeholder="例）花子" size="50"  maxlength="">
+                    </form>
+                </div>
+                <div class="block3 mainmargin">
+                <dl><u>どんなチョコ？</u></dl>
+                    <div class="pgroup">
+                        <form action="#" method="post" id="chocolate">
+                        <p> <label><input type="radio" name="choco" id="choco" value="ビターチョコ">ビターチョコ</label>
+                            <label><input type="radio" name="choco" id="choco" value="ミルクチョコ">ミルクチョコ</label>
+                            <label><input type="radio" name="choco" id="choco" value="ホワイトチョコ">ホワイトチョコ</label><dl>
+                            <label><input type="radio" name="choco" id="choco" value="生チョコ">生チョコ</label>
+                            <label><input type="radio" name="choco" id="choco" value="チョコカップケーキ">チョコカップケーキ</label>
+                            <label><input type="radio" name="choco" id="choco" value="ガトーショコラ" >ガトーショコラ</label><dl>
+                        </p>
+                    </form>
+                    </div>
+                </div>
+                <div class="block4 mainmargin">
+                    <dl><label for="call"><u>なんて言いながら？</u></label></dl>
+                    <form action="#" method="post">
+                        <input type="text" name="call" id="call" placeholder="例）これ、バレンタインです..." size="50"  maxlength="">
+                    </form>
+                </div>
+                <div class="block5 mainmargin">
+                    <dl><label for="do"><u>その子は何をした？</u></label></dl>
+                    <form action="#" method="post">
+                    <input type="text" name="do" id="do" placeholder="例）渡した!" size="50"  maxlength="">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="formone">
+                <hr/>
+                    <button id="button1" onclick="ButtonClick();">この設定で受け取る</button>
+                <hr/>
+                <div class="drawresult">
+                    <p><output id="warning"></output></p>
+                    <div class="outputs">
+                        <p><output id="yournameoutput"></output></p>
+                        <p><img id="humanimage" src="img/image0.png"></p>
+                        <p><output id="calloutput"></output></p>
+                        <p><output id="mynameoutput"></output></p>
+                        <p><output id="chocooutput"></output></p>
+                        <p><img id="chocoimage" src="img/image0.png"></p>
+                        <p><output id="dooutput"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="copy">
+                &copy;2022 IRIS
+            </div>
+        </div>
+    </body>
+</html>
